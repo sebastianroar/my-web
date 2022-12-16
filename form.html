@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/pages/index.css">
+  <title>Forms</title>
+  <style>
+    .input-text {
+      display: flex;
+      gap: 4px;
+      border: 1px solid black;
+      border-radius: 4px;
+      padding: 4px;
+      width: fit-content;
+    }
+
+    .input-text input {
+      border: none;
+    }
+
+    .input-text input:focus {
+      outline: none;
+    }
+
+    /* .input-text input:focus {
+      box-shadow: 0px 0px 0px 3px #60A5FA;
+    } */
+
+    .input-text:focus-within {
+      box-shadow: 0px 0px 0px 3px #60A5FA;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      <h2 class="heading-lg">Inputs</h2>
+    </div>
+    <form action="">
+      <div class="input-container mb-16" data-error="Error message">
+        <label class="input-label" for="">First Name</label><br>
+        <input class="input" type="text" placeholder="Name" id="first-name" name="first-name" required value="Hola">
+      </div>
+      <div class="input-container mb-16">
+        <label for="last-name">Last Name</label>
+        <div class="input-text">
+          <img src="images/icons/user.svg" alt="Avatar image">
+          <input class="input" type="text" placeholder="Last Name" id="last-name" name="last-name">
+        </div>
+      </div>
+      <div class="mb-16">
+        <label for="email">Email</label>
+        <input class="input" type="email" placeholder="Email" id="email" name="email">
+      </div>
+      <div class="mb-16">
+        <label for="age">Age</label>
+        <input type="number" placeholder="Age" id="age" name="age">
+      </div>
+      <div class="mb-16">
+        <label for="birthday">Birthday</label>
+        <input type="date" id="birthday" name="birthday">
+      </div>
+      <div class="mb-16">
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" id="password" name="password">
+      </div>
+      <div class="mb-16">
+        <label for="color">Color</label>
+        <input type="color" id="color" name="color">
+      </div>
+      <div class="mb-16">
+        <label for="phone">Phone</label>
+        <input type="tel" placeholder="Phone" id="phone" name="phone">
+      </div>
+      <div class="mb-16">
+        <p>Select one Country:</p>
+        <div>
+          <input type="radio" id="peru" name="country" value="PE"><label for="peru">Peru</label>
+          <input type="radio" id="chile" name="country" value="CH"><label for="chile">Chile</label>
+          <input type="radio" id="mexico" name="country" value="MX"><label for="mexico">Mexico</label>
+        </div>
+      </div>
+      <div class="mb-16">
+        <p>Which programming language do you know?</p>
+        <input type="checkbox" name="javascript" id="javascript">
+        <label for="javascript">JavaScript</label>
+        <input type="checkbox" name="ruby" id="ruby">
+        <label for="ruby">Ruby</label>
+        <input type="checkbox" name="python" id="python">
+        <label for="python">Python</label>
+      </div>
+      <div class="mb-16">
+        <p>Select a city</p>
+        <select name="city" id="city">
+          <option value="default" selected disabled>-Select a City-</option>
+          <option value="lim">Lima</option>
+          <option value="stg">Santiago</option>
+          <option value="cdmx">Ciudad de Mexico</option>
+        </select>
+      </div>
+      <div class="mb-16">
+        <textarea name="descrption" id="description" cols="50" rows="5"></textarea>
+      </div>
+      <div class="mb-16">
+        <input type="file" name="file" id="file">
+      </div>
+      <div class="mb-16">
+        <input type="hidden">
+      </div>
+      <button class="btn btn--primary">Enviar</button>
+    </form>
+  </section>
+  <script>
+    document.querySelectorAll('.input-container[data-error] .input').forEach(inpEl => {
+      inpEl.addEventListener('.input', () => inpEl.parentElement.removeAttribute('data-error'));
+    });
+  </script>
+</body>
+
+</html>

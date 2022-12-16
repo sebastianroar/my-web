@@ -1,0 +1,56 @@
+.input-container {
+  display: box;
+  gap: 4px;
+}
+
+.input-label {
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+  font-weight: var(--light);
+  font-size: calc(12 / 16 * 1rem);
+  line-height: 1.5;
+}
+
+.input {
+  background: #ffffff;
+  width: 256px;
+  height: 40px;
+  border-radius: 6px;
+  border: 1px solid var(--gray-700);
+  padding-left: 12px;
+  outline: none;
+  /* color: var(--gray-500); */
+}
+
+.input::placeholder {
+
+  font-family: var(--font-primary);
+  font-weight: var(--light);
+  font-size: 1rem;
+  line-height: 150%;
+  /* color: var(--gray-500); */
+}
+
+.input:focus, 
+.input:active {
+  box-shadow: 0px 0px 0px 3px var(--blue-400);
+  border: 1px solid var(--gray-700);
+}
+
+
+
+/* SOME TESTS FOR THE ERROR MESSAGE */
+
+/* .input-container[data-error] .input {
+  border: 1px solid var(--red-500);
+  color: var(--red-500);
+}
+
+.input-container[data-error]::after {
+  content: attr(data-error);
+  font-size: 0.875rem;
+  line-height: 150%;
+  color: var(--red-500);
+  display: block;
+  margin: 4px 0; 
+} */

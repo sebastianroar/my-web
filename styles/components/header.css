@@ -1,0 +1,53 @@
+@import url(button.css);
+
+.header-wrapper {
+  background-color: var(--color-bg);
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+
+.header__logo {
+  text-decoration: none;
+  color: inherit;
+}
+
+.right-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 8px;
+}
+
+.nav-link {
+  color: var(--color-primary);
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+.nav-link:hover {
+  color: var(--color-primary-dark);
+}
+
+.nav-link:focus {
+  outline: 1px solid var(--color-primary);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 16px;
+}

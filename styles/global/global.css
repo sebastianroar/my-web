@@ -1,0 +1,49 @@
+@import url(reset.css);
+@import url(colors.css);
+@import url(typograhy.css);
+@import url(layout.css);
+@import url(inputs.css);
+
+:root {
+  --color-text: var(--gray-900);
+
+  --color-primary-lighter: var(--pink-100);
+  --color-primary-light: var(--pink-300);
+  --color-primary: var(--pink-600);
+  --color-primary-dark: var(--pink-700);
+  --color-primary-darker: var(--pink-900);
+
+  --color-secondary-lighter: var(--stone-100);
+  --color-secondary-light: var(--stone-300);
+  --color-secondary: var(--stone-500);
+  --color-secondary-dark: var(--stone-700);
+  --color-secondary-darker: var(--stone-900);
+
+  --color-bg-lighter: white;
+  --color-bg-light: var(--gray-50);
+  --color-bg: var(--gray-100);
+  --color-bg-dark: var(--gray-200);
+  --color-bg-darker: var(--gray-300);
+
+  --color-error: var(--red-400);
+  --color-warning: var(--yellow-300);
+  --color-success: var(--green-400);
+  --color-info: var(--blue-400);
+}
+
+body {
+  background-color: var(--color-bg);
+  font-family: var(--font-primary);
+  font-weight: var(--light);
+  color: var(--color-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-secondary);
+  font-weight: var(--regular);
+}

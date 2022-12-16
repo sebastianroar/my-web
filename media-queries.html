@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Queries</title>
+  <style>
+    .item {
+      width: 100%;
+      height: 100px;
+      background-color: aquamarine;
+      border: 1px solid gray;
+    }
+
+    .container-items {
+      display: flex;
+    }
+
+    @media screen and (max-width: 600px) {
+      .item {
+        background-color: brown;
+      }
+
+      .container-items {
+        flex-direction: column;
+      }
+    }
+
+    @media screen and (min-width: 601px) and (max-width: 800px) {
+      .item {
+        background-color: blue;
+      }
+    }
+
+    .navbar-media-query {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar-media-query a {
+      text-decoration: none;
+    }
+
+    .navbar-media-query li {
+      list-style-type: none;
+    }
+
+    .header-media-query {
+      display: flex;
+      justify-content: end;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu {
+      display: none;
+    }
+
+    .mobile-menu {
+      background-color: beige;
+      width: 100%;
+    }
+
+    .navbar-mobile {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      text-align: center;
+      display: none;
+    }
+
+    @media screen and (max-width: 600px) {
+      .navbar-media-query {
+        display: none;
+      }
+
+      .menu {
+        height: 24px;
+        display: block;
+      }
+      
+      .navbar-mobile--open {
+        display: flex;
+      }
+    }
+
+    .mobile-menu {
+      background-color: beige;
+      width: 100%;
+    }
+
+    .header-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 100%;
+    }   
+    
+  </style>
+</head>
+
+<body>
+  <h1>Media Queries</h1>
+  <div class="container-items">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+  <section class="section">
+    <header class="header-media-query">
+      <div class="header-content">
+        <ul class="navbar-media-query">
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+        </ul>
+        <img class="menu" src="images/icons/menu-line.svg" alt="menu" onclick="showMenu()">
+        <div class="mobile-menu">
+          <ul class="navbar-mobile navbar-mobile--open">
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+  </section>
+  <script>
+    let navBarMobile = document.querySelector(".navbar-mobile");
+    function showMenu() {
+      navBarMobile.classList.toggle("navbar-mobile--open");
+    }
+  </script>
+</body>
+
+</html>
