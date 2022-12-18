@@ -1,0 +1,70 @@
+.portfolio-container {
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 16px;
+  gap: 16px;
+}
+
+.projects {
+  display: grid;
+  max-width: 1024px;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(auto, 480px));
+  gap: 16px;
+}
+
+.portfolio-project {
+  display: grid;
+  padding: 24px;
+  background-color: #FFF;
+  border-radius: 8px 0px 0px 0px;
+}
+
+.portfolio-project-icons {
+  display: flex;
+}
+
+.tools-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.portfolio-project-icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 8px;
+  background-color: var(--gray-100);
+}
+
+.arrow-icon {
+  height: 18px;
+}
+
+.portfolio-project-body {
+  display: grid;
+  gap: 8px;
+  width: fill;
+  margin-top: 16px;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill-container {
+  padding: 2px 10px;
+  border-radius: 10px;
+  background-color: var(--pink-100);
+}
+
